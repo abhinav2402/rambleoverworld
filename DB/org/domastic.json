@@ -1,0 +1,49 @@
+{
+    "DashbordDoasticPackage": [
+
+        { "Image": "../../../Images/g1.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month July" },
+        { "Image": "../../../Images/g2.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month Aug" },
+        { "Image": "../../../Images/g4.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month Sep" },
+        { "Image": "../../../Images/g8.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month Oct" }
+
+    ],
+    "DashbordInternationalPackage": [
+        { "Image": "../../../Images/g1.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month July" },
+        { "Image": "../../../Images/g2.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month Aug" },
+        { "Image": "../../../Images/g4.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month Sep" },
+        { "Image": "../../../Images/g8.jpg", "City": "Berlin", "TotalPackage": "8", "StartingPrice": "4000", "Available": "Month Oct" }
+    ],
+    "header": {
+        "logoImg": "../../../Images/logo.png",
+        "logoHref": "http://www.Rambleoverworld.com"
+    },
+    "Origions": [ "Goa", "Agra", "Mathura" ],
+    "destinations": [ "Palam", "Kapashera", "Gurgaon" ],
+    "TravellerMonths": [ "December", "January", "Febrary" ],
+    "Review": [
+
+        {
+            "Text": "Dear Mahesh ji Thanks a lot for your efforts and excellent vacation program in Odisha. We thoroughly enjoyed our vacation and would definitely have Moksha Tour Planners Pvt Ltd as one of my favorites for my future offs. Hats Off. Keep up the Good Work. Catch u Soon. Anup Kumar",
+            "ReviewBy": "Abhinav"
+        },
+         { "Text": "Dear Ram ji Thanks a lot for your efforts and excellent vacation program in Odisha. We thoroughly enjoyed our vacation and would definitely have Moksha Tour Planners Pvt Ltd as one of my favorites for my future offs. Hats Off. Keep up the Good Work. Catch u Soon. Anup Kumar" ,
+           "ReviewBy":  "Abhinav"
+        }
+
+    ],
+    "Slides": [
+        {
+            "images": "../../../Images/1.jpg",
+            "text1": "Flat 60% CashBack",
+            "text2": "Get fabulous discount on selected packages"
+        },
+
+        {
+            "images": "../../../Images/2.jpg",
+            "text1": "Flat 20% CashBack",
+            "text2": "Get fabulous discount on selected packages"
+        }
+    ]
+
+
+}

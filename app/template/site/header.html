@@ -1,0 +1,43 @@
+<style>
+    @media screen and (min-width: 768px) {
+    .ddd{
+        display: block !important;
+    }
+}
+</style>
+<div class="row" >
+    <div class=" col-md-12 ">
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color:white;border:none">
+            <div class="container-fluid" style="background-color: white; margin-left: 2%; margin-right: 2%; width: 96%; height: 10%; border-bottom: 1px solid darkblue; ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand active" style="padding: 5px 0px;" href="{{data.logoHref}}}">
+                        <img ng-src="{{data.logoImg}}"
+                             style="background-image:none;padding-left:0px;" />
+                    </a>
+
+                  
+
+                </div>
+                <div collapse="navCollapsed" class="nav-collapse collapse navbar-responsive-collapse ddd ">
+                    <span style="padding-top:20px; margin-left :30%;line-height:3.5"><img src="../../../Images/phone.png" />&nbsp;&nbsp;
+                    <span style="display:inline;font-family:Calibri;font-size:24px;">9811145899</span> </span>  
+                    <ul class="nav navbar-nav navbar-right" style="padding-bottom: 20px; padding-top:20px;">
+                        <li class="active" style="cursor:pointer"><a href="/">Package</a></li>
+                        <li><a ui-sref="Info">Offers</a></li>
+                        <li><a ui-sref="Info">About Us</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+    <div class="row" >
+        <hr style="color:black" />
+        </div>
+

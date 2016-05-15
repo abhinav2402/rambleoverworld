@@ -1,0 +1,415 @@
+﻿
+
+<div style="background-color :#ebeced;width:100%">
+    <div class="row" style="background-color :#37454D;height:80px;margin:0px;padding:55px; padding-top:50px;">
+        <div class="col-sm-6  col-xs-12 col-md-3 " style="padding:0px;">
+            <input type="text" id="StrFromtext" ng-model="LeavingFrom" class="form-control" style="border-radius:0px;margin-top:10px;" placeholder=" Leaving from (Optional)" uib-typeahead="Origion for Origion in Origions | filter:$viewValue | limitTo:8 " />
+
+        </div>
+        <div class="col-sm-6  col-xs-12 col-md-3 " style="padding:0px;">
+            <input type="text" id="GoingFromtext" ng-model="GoingTo" class="form-control" style="border-radius:0px;margin-top:10px; position:relative" placeholder="Going To" uib-typeahead="destination for destination in destinations |filter:$viewValue| limitTo:8" />
+        </div>
+        <div class="col-sm-6  col-xs-12 col-md-3 " style="padding:0px;">
+            <input type="text" id="Monthtext" ng-model="TravellorMonth" class="form-control" style="border-radius:0px;margin-top:10px;" placeholder="Month Of Travel(Any)" uib-typeahead="TravellerMonth for TravellerMonth in TravellerMonths | limitTo:8" />
+        </div>
+        <div class="col-sm-6  col-xs-12 col-md-3 " style="padding:0px;">
+            <input type="submit" id="StrFromtext" value="Search" class="form-control" ng-click="search()" style="border-radius:0px;background-color:#007faD;color:white;margin-top:10px" />
+        </div>
+    </div>
+   
+
+    <div class="row" style="background-color:#ebeced;height:100%;margin:0px;">
+        <div class="col-md-3" style="margin-top:10px;padding-left:2%; ">
+            <uib-tabset justified="true" style="border: 1px solid #ddd;background-color:white">
+                <uib-tab heading="Total Package(200)" style="font-size:1.2em;font-weight:bolder;text-align:left">
+                    <div style="width:100%;border-top: 1px  solid black;margin:0px;padding:0px;">
+                        <uib-accordion close-others="false" style="margin-bottom:0px;">
+                            <uib-accordion-group is-open="open">
+                                <uib-accordion-heading>
+                                    Domestic Package
+                                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open, 'glyphicon-chevron-right': !open}"></i>
+                                </uib-accordion-heading>
+                                <div class="panel-body" ng-repeat="domastic in DomasticPackage" >
+                                    <a style="cursor:pointer" ng-click="searchOrigin(domastic.Name)">  {{domastic.Name}}</a>
+                                </div>
+
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="open2">
+                                <uib-accordion-heading>
+                                    International Package
+                                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open2, 'glyphicon-chevron-right': !open2}"></i>
+                                </uib-accordion-heading>
+                                <div class="panel-body" ng-repeat="domastic in InternationalPackage " style="cursor:pointer">
+                                    <a style="cursor:pointer" ng-click="searchOrigin(domastic.Name)">  {{domastic.Name}}</a>
+                                </div>
+
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="open3">
+                                <uib-accordion-heading>
+                                    Duration
+                                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open3, 'glyphicon-chevron-right': !open3}"></i>
+                                </uib-accordion-heading>
+                                <div class="panel-body" ng-repeat="domastic in Duration">
+                                    <span style="cursor:pointer"><input type="checkbox" ng-change="LoadDataFromDiscount(domastic)" ng-model="domastic.Value" />&nbsp;&nbsp;{{domastic.Name}}</span>
+                                </div>
+
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="open4">
+                                <uib-accordion-heading>
+                                    Budget
+                                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open4, 'glyphicon-chevron-right': !open4}"></i>
+                                </uib-accordion-heading>
+                                <div class="panel-body" ng-repeat="domastic in Budget">
+                                   
+                                    <span style="cursor:pointer"><input type="checkbox" ng-change="LoadDataFromDiscount(domastic)" ng-model="domastic.Value" />&nbsp;&nbsp;{{domastic.Name}}</span>
+                                </div>
+
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="open5">
+                                <uib-accordion-heading>
+                                    Price
+                                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open5, 'glyphicon-chevron-right': !open5}"></i>
+                                </uib-accordion-heading>
+                                <div class="panel-body" ng-repeat="domastic in Price">
+                                   
+                                    <span style="cursor:pointer"><input type="checkbox" ng-change="LoadDataFromDiscount(domastic)" ng-model="domastic.Value" />&nbsp;&nbsp;{{domastic.Name}}</span>
+                                </div>
+
+                            </uib-accordion-group>
+                        </uib-accordion>
+                    </div>
+                </uib-tab>
+
+            </uib-tabset>
+
+        </div>
+        <div class="col-md-9" style=" background-color:#f3f3f3">
+            <div class="row">
+                <div class="col-md-12" style="margin-top:10px;">
+                    <select name="repeatSelect" id="sortBy" ng-model="Sort.sortBy" class="form-control" style=" width:200px;float:right;margin-right:13px;margin-top:2px;">
+                        <option ng-repeat="option in Sort.SortOptions"
+                                value="{{option.id}}">
+                            {{option.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div style="width: 99%; margin-top: 2%; margin-bottom: 5%; border-top: 2px dotted black;">
+                <div ng-repeat="product in packageinfo | filter:searchFilter:strict " style="border-bottom: 2px dotted black;">
+                    <div class="row" style="background-color:white;">
+                        <div class="col-md-3" style="margin-right:0px;padding-right:0px;">
+                            <img src={{product.Image}} class=".img-responsive imagehover" style="height:150px;padding:0px;margin:0px;margin-bottom:10px;padding-top:10px;" />
+                        </div>
+                        <div class="col-md-5" style="margin-right:0px;padding-right:0px; ">
+                            <h4 style="text-align:left;font-size:1.2em;color:green">{{product.Name}}</h4>
+                            <table style="width:100%;margin:0px;padding:0px;">
+                                <tr>
+                                    <td colspan="2" align="left" style="color:blue">{{product.Days}}</td>
+
+                                </tr>
+                                <tr></tr>
+                            </table>
+                            <h4 style="text-align:left;font-size:1.2em;color:black"> To {{product.To}}</h4>
+                            <table style="width:100%;margin:0px;padding:0px;">
+                                <tr>
+                                    <td><img src={{product.Flight}} class=".img-responsive imagehover" /></td>
+                                    <td><img src={{product.Bed}} class=".img-responsive imagehover" /></td>
+                                    <td><img src={{product.Meal}} class=".img-responsive imagehover" /></td>
+                                    <td><img src={{product.Car}} class=".img-responsive imagehover" /></td>
+                                    <td><img src={{product.Photo}} class=".img-responsive imagehover" /></td>
+                                    <td><img src={{product.Bus}} class=".img-responsive imagehover" /></td>
+
+                                </tr>
+                                <tr></tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 style="text-align:right">Price : {{product.Price}} </h4>
+                            <input type="submit" id="StrFromtext" value="View Package" class="form-control" ng-click="enquiry(product)" style="border-radius:0px;background-color:#007faD;color:white;margin-top:65px;width:130px;float:right" />
+                        </div>
+                    </div>
+                    <script type="text/ng-template" id="MyPackageDetails.html">
+                        <style>
+                            #price, th, td {
+                                border: 1px solid black;
+                            }
+                        </style>
+                        <div class="modal-header" style="background-color:#999999;color:white;width:750px;">
+                            <h4 class="modal-title" style="text-align:center;padding:0px;margin:0px;height:16px;line-height:.8">
+                                Price Of Package : {{items.Price}}
+                            </h4>
+                        </div>
+                        <div class="modal-body" style="padding-top:5px;background-color :#ebeced;height:580px;width:750px;margin-top:0px;padding-top:0px;">
+                            <div style="width:720px;">
+                                <uib-tabset active="activeForm">
+                                    <uib-tab index="0" heading="Package Overview">
+                                        <div my-map="" source={{items.origin}} destination={{items.destination}} wayout={{items.Wayout}} ng-cloak></div>
+                                    </uib-tab>
+                                    <uib-tab index="1" heading="Itenary">
+                                        <div ng-repeat="product in items.Itenary" style="margin-left:3%;margin-top:2%;">
+                                            <h4 style="color:black">{{product.Key}}</h4>
+                                            • {{product.Value}}
+                                        </div>
+
+                                    </uib-tab>
+                                    <uib-tab index="2" heading="Price">
+                                        <div style="height:400px;">
+                                            <table style="border-collapse: collapse; margin-left:3%;margin-top:2%;padding-bottom:2%;" id="price">
+                                                <tr>
+                                                    <th style=" padding: 8px;background-color: #f3f3f3;color:black">Hotel Category</th>
+                                                    <th style=" padding: 8px;background-color: #f3f3f3;color:black">Price Per Person( ₹ )</th>
+                                                    <th style=" padding: 8px;background-color: #f3f3f3;color:black">Hotel Options</th>
+
+                                                </tr>
+                                                <tr ng-repeat="product in items.Hotel">
+
+                                                    <td style=" padding: 8px;">{{product.Cat}}</td>
+                                                    <td style=" padding: 8px;">{{product.Price}}</td>
+                                                    <td style=" padding: 8px;">
+                                                        {{product.Option}}
+                                                    </td>
+
+                                                </tr>
+                                            </table>
+                                            <div style="padding-top:40px;">
+                                                <span style="padding-top:20%;margin-left:3%" ng-repeat="product in items.Validity">
+
+                                                    <h4 style="color:black;display:inline">{{product.Key}}:</h4>    {{product.Value}}   |
+                                                    <h4 style="color:black;display:inline">{{product.Key1}}:</h4>    {{product.Value1}}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </uib-tab>
+                                    <uib-tab index="3" heading="Inclusions / Exclusions">
+                                        <h4 style="color:black">
+                                            Inclusion Details
+                                        </h4>
+                                        <div ng-repeat="product in items.Inclusion" style="margin-left:3%;padding-bottom:2%">
+
+                                            •	{{product}}<br />
+                                        </div>
+                                        <h4 style="color:black">
+                                            Exclusion Details
+                                        </h4>
+                                        <div ng-repeat="product in items.Exclusion" style="margin-left:3%;padding-bottom:2%">
+
+                                            •	{{product}}<br />
+                                        </div>
+                                    </uib-tab>
+                                    <uib-tab index="4" heading=" Request Quote">
+                                        <div style="margin-left:3%;margin-top:2%;padding-bottom:2%;height:350px;">
+
+                                            <div class="col-md-11 " style="margin-top:5%;margin-left:10px;">
+                                                <input type="text" id="txtName" ng-model="Name" class="form-control" placeholder="Name" />
+                                            </div>
+                                            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:3%;margin-left:10px;">
+                                                <input type="text" id="txtEmail" ng-model="Email" class="form-control" placeholder="Email" />
+                                            </div>
+                                            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:3%;margin-left:10px;">
+                                                <input type="text" id="txtPhone" ng-model="Phone" class="form-control" placeholder="Mobile" />
+                                            </div>
+                                            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:3%;margin-left:10px;">
+                                                <input type="text" id="txtDescription" ng-model="Phone" class="form-control" placeholder="Description" />
+                                            </div>
+                                            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:3%;margin-left:10px;text-align:center">
+                                                <button class="btn btn-primary" type="button" style="width:300px;">Submit</button>
+                                            </div>
+
+                                        </div>
+                                    </uib-tab>
+                                </uib-tabset>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer" style="background-color:#999999;width:750px;">
+
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background-color:#f3f3f3;margin-top:10px;padding:0px;margin:0px;">
+        <div class="col-md-12">
+            <h4>About Us</h4>
+            <p style="font-size:.9em;">
+                Ramble Over World brings you a wide range of holiday options in India and abroad.
+                Select from a wide variety of standard packages or customize your holiday.
+                Find amazing deals on individual (FIT) and group (GIT) travel to hot selling destinations of Asia (Thailand, Singapore, Maldives, Mauritius, Malaysia,
+                Hong Kong and Macau, the Indian Subcontinent and others), the Americas (USA, Mexico, Canada), Europe (Western and Eastern Europe), and the Middle East
+                (Dubai and other Emirates) among others.
+            </p>
+        </div>
+        <div class="col-md-10">
+            <h4>What People Say</h4>
+            <uib-carousel interval="myinterval" no-wrap="nowrapslides" style="padding:10px;">
+                <uib-slide ng-repeat="slide in review">
+                    <img src="../../../Images/testimonial.png" />
+                    <p style="margin-bottom:2%;">
+                        {{slide.Text}}
+                    </p>
+                    <span style="float:right;margin-right:20px;">-{{slide.ReviewBy}}</span>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+
+        <div class="col-md-2" style="float:right ">
+            <h4>Payment Secured By</h4>
+            <img src="../../../Images/payment-option.png" />
+        </div>
+        <div class="col-md-12" style="margin-right:0px;padding-right:0px;">
+            <div style="width:100%;margin-top:2%;text-align:left; color: #333;background-color:#f3f3f3;font-size:.9em;font-family: Segoe UI, Verdana, Helvetica, Sans-Serif; padding-bottom:20px;">
+                <p>
+                    &copy; Copyright © 2016, Ramble Over world. All rights Reserved.&nbsp;&nbsp; <a href="https://www.facebook.com/Ramble-Over-World-Holidays-Pvt-Ltd-1224412537584318/timeline/" class="icon icon-mono facebook" target="_blank">facebook</a>
+                    <a href="https://twitter.com/rambleoverworld" class="icon icon-mono twitter" target="_blank">twitter</a>
+                    <a href="https://www.linkedin.com/in/ramble-over-world-holidays-45bb33105?trk=nav_responsive_tab_profile_pic" class="icon icon-mono linkedIn" target="_blank">linkedIn</a>
+                    <a href="https://plus.google.com/111890910382604851382" class="icon icon-mono googleplus" target="_blank">googleplus</a>
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <section id="hiddenPanel" ng-class="{on:onOff}" class="txt-highlight-color bg-color bg-pattern" style="cursor:pointer">
+        <div class="row" style="width:80%;text-align:center">
+            <span style="color:white;float:right" ng-click="onOff=!onOff"> [X]</span>
+            <p style="color:white;padding:20px;padding-bottom:10px;">
+                Please Enter your Details, Our Traval expert will connect you sortly to provide best deals.
+            </p>
+            <div class="col-md-11 " style="margin-top:1%;margin-left:10px;">
+                <input type="text" id="txtName" ng-model="Name" class="form-control" placeholder="Name" style="margin-left:8%" />
+            </div>
+            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:1%;margin-left:10px;">
+                <input type="text" id="txtEmail" ng-model="Email" class="form-control" placeholder="Email" style="margin-left:8%" />
+            </div>
+            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:1%;margin-left:10px;">
+                <input type="text" id="txtPhone" ng-model="Phone" class="form-control" placeholder="Mobile" style="margin-left:8%" />
+            </div>
+            <div class="col-sm-6  col-xs-12 col-md-11 " style="margin-top:1%;margin-left:10px;">
+                <input type="submit" id="txtSearch" value="Search" class="form-control" style="border-radius:0px;background-color:#007faD;color:white;margin-top:10px;margin-left:8%" />
+            </div>
+        </div>
+        <span id="close-bar" ng-class="{on:onOff}   class=" mybutton" ng-click="onOff=!onOff">Chat with us</span>
+    </section>
+
+
+    <style>
+        #hiddenPanel {
+            position: fixed;
+            bottom: 0px;
+            width: 0px;
+            height: 0px;
+            background-color: grey;
+        }
+
+            #hiddenPanel.on {
+                position: fixed;
+                width: 25.3%;
+                margin-left: 70%;
+                height: 250px;
+                background-color: grey;
+                text-align: center;
+            }
+
+        #close-bar {
+            position: fixed;
+            bottom: 0px;
+            background: #48718F;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+            width: 25.3%;
+            margin-left: 70%;
+        }
+
+            #close-bar.on {
+                position: absolute;
+                bottom: 10px;
+                background: #48718F;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                font-size: 15px;
+                width: 25.3%;
+                margin-left: 10%;
+            }
+
+
+        .icon {
+            display: inline-block;
+            vertical-align: top;
+            overflow: hidden;
+            margin: 4px;
+            margin-top: 0px;
+            width: 26px;
+            height: 26px;
+            font-size: 0;
+            /*text-indent: -9999px;*/
+        }
+
+        .icon-mono {
+            background: url("../../../Images/socialcon.png") no-repeat;
+            background-color: white;
+            -webkit-transition: background 0.3s;
+            transition: background 0.3s;
+        }
+
+            /* facebook */
+            .icon-mono.facebook {
+                background-position: 9px 4px;
+            }
+
+                .icon-mono.facebook:hover {
+                    background-color: #3b5998;
+                    background-position: 9px -26px;
+                }
+
+
+            .icon-mono.twitter {
+                background-position: -56px 4px;
+            }
+
+                .icon-mono.twitter:hover {
+                    background-color: #4099ff;
+                    background-position: -56px -26px;
+                }
+
+            .icon-mono.linkedIn {
+                background-position: -90px 4px;
+            }
+
+                .icon-mono.linkedIn:hover {
+                    background-color: #4875B4;
+                    background-position: -90px -26px;
+                }
+
+            .icon-mono.googleplus {
+                background-position: -122px 4px;
+            }
+
+                .icon-mono.googleplus:hover {
+                    background-color: #C63D2D;
+                    background-position: -122px -26px;
+                }
+
+            .icon-mono.instagram {
+                background-position: -150px 4px;
+            }
+
+                .icon-mono.instagram:hover {
+                    background-color: #C63D2D;
+                    background-position: -150px -26px;
+                }
+
+    </style>
+</div>
+
+
+

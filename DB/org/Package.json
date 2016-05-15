@@ -1,0 +1,271 @@
+{
+    "Package": [
+        {
+            "Id": 1,
+            "Name": "Europe",
+            "Image": "../../../Images/g1.jpg",
+            "Days": "10 Days /9 Night",
+            "To": "switzerland, Germany",
+            "origin": "Europe",
+            "destination": "switzerland",
+            "Wayout": "Germany|",
+            "Price": "35000",
+            "Flight": "../../../Images/flights.png",
+            "Bed": "../../../Images/aco-g.png",
+            "Meal": "../../../Images/meals.png",
+            "Car": "../../../Images/cars.png",
+            "Photo": "../../../Images/sight-g.png",
+            "Bus": "../../../Images/trains.png",
+            "Inclusion": [
+                "02 nights accommodation in Kuala Lumpur",
+                "01 night accommodation in Genting Highlands",
+                "02 nights accommodation in Langkawi",
+                "Langkawi Half day Round Island Tour on SIC basis {1030 hours}",
+                "Daily breakfast",
+                "Half day City Tour of Kuala Lumpur on SIC basis {0900 hours/1400 hours}"
+            ],
+            "Exclusion": [ "Any airfare", "Misc Expenditure", "Mineral Water", "Escort", "Porterage at Hotel" ],
+
+            "Itenary": [
+               {
+                    "Key": "Day 1: Arrive Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": "Day 2: Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": " Day 3: Kuala Lumpur to Genting",
+                     "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."},
+                {
+                    "Key": " Day 4: Kuala Lumpur to Genting",
+              "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." },
+                {
+                    "Key": " Day 5: Kuala Lumpur to Genting",
+             "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." }
+            ],
+            "Hotel": [
+                { "Cat": "Hotels", "Price": "14,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " },
+                { "Cat": "Hotels", "Price": "15,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " }
+            ],
+            "Validity": [ { "Key": "Valid From", "Value": "09 Jan 2016", "Key1": "Valid Until", "Value1": "30 Apr 2016" } ]
+        },
+        {
+            "Id": 2,
+            "Name": "Agra",
+            "Image": "../../../Images/g1.jpg",
+            "Days": "10 Days /9 Night",
+            "To": "Agra, Sikangra, Tajmahal",
+            "origin": "Agra",
+            "destination": "Sikangra",
+              "Wayout": "0",
+            "Price": "2000",
+            "Flight": "../../../Images/flights.png",
+            "Bed": "../../../Images/aco-g.png",
+            "Meal": "../../../Images/meals.png",
+            "Car": "../../../Images/cars.png",
+            "Photo": "../../../Images/sight-g.png",
+            "Bus": "../../../Images/trains.png",
+            "Inclusion": [
+                "02 nights accommodation in Kuala Lumpur",
+                "01 night accommodation in Genting Highlands",
+                "02 nights accommodation in Langkawi",
+                "Langkawi Half day Round Island Tour on SIC basis {1030 hours}",
+                "Daily breakfast",
+                "Half day City Tour of Kuala Lumpur on SIC basis {0900 hours/1400 hours}"
+            ],
+            "Exclusion": [ "Any airfare", "Misc Expenditure", "Mineral Water", "Escort", "Porterage at Hotel" ],
+
+            "Itenary": [
+                {
+                    "Key": "Day 1: Arrive Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": "Day 2: Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": " Day 3: Kuala Lumpur to Genting",
+                     "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."},
+                {
+                    "Key": " Day 4: Kuala Lumpur to Genting",
+              "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." },
+                {
+                    "Key": " Day 5: Kuala Lumpur to Genting",
+             "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." }
+            ],
+            "Hotel": [
+                { "Cat": "Hotels", "Price": "14,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " },
+                { "Cat": "Hotels", "Price": "15,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " }
+            ],
+            "Validity": [ { "Key": "Valid From", "Value": "09 Jan 2016", "Key1": "Valid Until", "Value1": "30 Apr 2016" } ]
+
+        },
+        {
+            "Id": 3,
+            "Name": "Mathura",
+            "Days": "10 Days /9 Night",
+            "Image": "../../../Images/g1.jpg",
+            "To": "Goverdhan",
+             "origin": "Mathura",
+            "destination": "Goverdhan",
+             "Wayout": "0",
+            "Price": "4000",
+            "Flight": "../../../Images/flights.png",
+            "Bed": "../../../Images/aco-g.png",
+            "Meal": "../../../Images/meals.png",
+            "Car": "../../../Images/cars.png",
+            "Photo": "../../../Images/sight-g.png",
+            "Bus": "../../../Images/trains.png",
+            "Inclusion": [
+                "02 nights accommodation in Kuala Lumpur",
+                "01 night accommodation in Genting Highlands",
+                "02 nights accommodation in Langkawi",
+                "Langkawi Half day Round Island Tour on SIC basis {1030 hours}",
+                "Daily breakfast",
+                "Half day City Tour of Kuala Lumpur on SIC basis {0900 hours/1400 hours}"
+            ],
+            "Exclusion": [ "Any airfare", "Misc Expenditure", "Mineral Water", "Escort", "Porterage at Hotel" ],
+
+            "Itenary": [
+                {
+                    "Key": "Day 1: Arrive Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": "Day 2: Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." },
+                {
+                    "Key": " Day 3: Kuala Lumpur to Genting",
+                   "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                },
+                {
+                    "Key": " Day 4: Kuala Lumpur to Genting",
+                     "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                },
+                {
+                    "Key": " Day 5: Kuala Lumpur to Genting",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                }
+            ],
+            "Hotel": [
+                { "Cat": "Hotels", "Price": "14,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar </br> Genting : First World Hotel </br> Langkawi : Citin Langkawi/ Similar " },
+                { "Cat": "Hotels", "Price": "15,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar </br> Genting : First World Hotel </br> Langkawi : Citin Langkawi/ Similar " }
+            ],
+            "Validity": [ { "Key": "Valid From", "Value": "09 Jan 2016", "Key1": "Valid Until", "Value1": "30 Apr 2016" } ]
+
+        },
+        {
+            "Id": 4,
+            "Name": "Hathras",
+            "Days": "10 Days /9 Night",
+            "Image": "../../../Images/g1.jpg",
+            "To": "Agra, Mathura",
+               "origin": "Agra",
+            "destination": "Mathura",
+              "Wayout": "aligarh|hathras|",
+            "Price": "4000",
+            "Flight": "../../../Images/flights.png",
+            "Bed": "../../../Images/aco-g.png",
+            "Meal": "../../../Images/meals.png",
+            "Car": "../../../Images/cars.png",
+            "Photo": "../../../Images/sight-g.png",
+            "Bus": "../../../Images/trains.png",
+            "Inclusion": [
+                "02 nights accommodation in Kuala Lumpur",
+                "01 night accommodation in Genting Highlands",
+                "02 nights accommodation in Langkawi",
+                "Langkawi Half day Round Island Tour on SIC basis {1030 hours}",
+                "Daily breakfast",
+                "Half day City Tour of Kuala Lumpur on SIC basis {0900 hours/1400 hours}"
+            ],
+            "Exclusion": [ "Any airfare", "Misc Expenditure", "Mineral Water", "Escort", "Porterage at Hotel" ],
+
+            "Itenary": [
+                 {
+                    "Key": "Day 1: Arrive Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": "Day 2: Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." },
+                {
+                    "Key": " Day 3: Kuala Lumpur to Genting",
+                   "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                },
+                {
+                    "Key": " Day 4: Kuala Lumpur to Genting",
+                     "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                },
+                {
+                    "Key": " Day 5: Kuala Lumpur to Genting",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                }
+            ],
+            "Hotel": [
+                { "Cat": "Hotels", "Price": "14,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " },
+                { "Cat": "Hotels", "Price": "15,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " }
+            ],
+            "Validity": [ { "Key": "Valid From", "Value": "09 Jan 2016", "Key1": "Valid Until", "Value1": "30 Apr 2016" } ]
+
+        },
+        {
+            "Id": 5,
+            "Name": "India",
+            "Days": "10 Days /9 Night",
+            "Image": "../../../Images/g1.jpg",
+            "To": "England",
+            "Price": "4000",
+             "origin": "Agra",
+            "destination": "Mathura",
+              "Wayout": "hathras|",
+            "Flight": "../../../Images/flights.png",
+            "Bed": "../../../Images/aco-g.png",
+            "Meal": "../../../Images/meals.png",
+            "Car": "../../../Images/cars.png",
+            "Photo": "../../../Images/sight-g.png",
+            "Bus": "../../../Images/trains.png",
+            "Inclusion": [
+                "02 nights accommodation in Kuala Lumpur",
+                "01 night accommodation in Genting Highlands",
+                "02 nights accommodation in Langkawi",
+                "Langkawi Half day Round Island Tour on SIC basis {1030 hours}",
+                "Daily breakfast",
+                "Half day City Tour of Kuala Lumpur on SIC basis {0900 hours/1400 hours}"
+            ],
+            "Exclusion": [ "Any airfare", "Misc Expenditure", "Mineral Water", "Escort", "Porterage at Hotel" ],
+
+            "Itenary": [
+                {
+                    "Key": "Day 1: Arrive Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel."
+                },
+                {
+                    "Key": "Day 2: Kuala Lumpur",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." },
+                {
+                    "Key": " Day 3: Kuala Lumpur to Genting",
+                   "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                },
+                {
+                    "Key": " Day 4: Kuala Lumpur to Genting",
+                     "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                },
+                {
+                    "Key": " Day 5: Kuala Lumpur to Genting",
+                    "Value": " Morning: Arrive in Kuala Lumpur & Transfer to the hotel on SIC. Rest of the Day at Leisure.Overnight at hotel." 
+                }
+            ],
+            "Hotel": [
+                { "Cat": "Hotels", "Price": "14,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " },
+                { "Cat": "Hotels", "Price": "15,799", "Option": "Kuala Lumpur : Hotel Pudu Plaza/ Similar Genting : First World Hotel Langkawi : Citin Langkawi/ Similar " }
+            ]
+            ,
+            "Validity": [ { "Key" :  "Valid From","Value" :  "09 Jan 2016" ,"Key1" :  "Valid Until","Value1" :  "30 Apr 2016" }]
+
+        }
+
+    ]
+}

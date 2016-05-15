@@ -1,0 +1,49 @@
+{
+    "DomasticPackage": [
+
+        { "Name": "Himachal" },
+        { "Name": "Goa" },
+        { "Name": "Ladakh" },
+        { "Name": "Vaishnodevi" },
+        { "Name": "Chardham Yatra" },
+        { "Name": "Amarnath" },
+        { "Name": "Andaman & Nicobar" },
+        { "Name": "Bangalore, Mysore & Ooty" },
+        { "Name": "Kashmir" },
+        { "Name": "Kerla" }
+
+    ],
+    "InternationalPackage": [
+        { "Name": "Bali" },
+        { "Name": "Bangkok - Pattaya" },
+        { "Name": "Hong Kong - Macau" },
+        { "Name": "Malaysia - Singapore" },
+        { "Name": "singapore" },
+        { "Name": "singapore" },
+        { "Name": "Mauritius" },
+        { "Name": "Nepal" },
+        { "Name": "KAZAKHSTAN" },
+        { "Name": "TASHKENT" },
+        { "Name": "TASHKENT" },
+        { "Name": "Dubai" }
+
+    ],
+
+    "Duration": [
+        { "Name": "1-3 Days", "Value": { "Min": "1", "Max": "2" } },
+        { "Name": "4-7 Days", "Value": { "Min": "3", "Max": "7" }},
+        { "Name": "8-14 Days", "Value": { "Min": "8", "Max": "14" } }
+    ],
+    "Budget": [
+        { "Name": "Economy", "Value": "Economy" },
+        { "Name": "Standard", "Value": "Standard" },
+        { "Name": "Luxury", "Value": "Luxury" }
+    ],
+    "Price": [ 
+
+        { "Name":    "<10000","Value": "<10000"},
+        { "Name": "10001-25000","Value": "10001-25000" },
+        { "Name": "25001-50000" ,"Value": "25001-50000"}
+    ]
+
+}
